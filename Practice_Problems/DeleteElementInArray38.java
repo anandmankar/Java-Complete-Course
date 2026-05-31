@@ -3,38 +3,39 @@ import java.util.Scanner;
 
 public class DeleteElementInArray38 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter array size: ");
-        int size = sc.nextInt();
+        try(Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter array size: ");
+            int size = sc.nextInt();
 
-        int[] arr = new int[size];
-        for(int i = 0; i < size; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        System.out.println("Enter element to delete: ");
-        int ele = sc.nextInt();
-
-        int cnt = 0;
-        for(int i = 0; i < size; i++) {
-            if(arr[i] == ele) {
-                cnt++;
+            int[] arr = new int[size];
+            for(int i = 0; i < size; i++) {
+                arr[i] = sc.nextInt();
             }
-        }
 
+            System.out.println("Enter element to delete: ");
+            int ele = sc.nextInt();
 
-        int[] updatedArray = new int[size-cnt];
-        int ind = 0;
-        for(int i = 0; i < size; i++) {
-            if(arr[i] != ele) {
-                updatedArray[ind] = arr[i];
-                ind++;
+            int cnt = 0;
+            for(int i = 0; i < size; i++) {
+                if(arr[i] == ele) {
+                    cnt++;
+                }
             }
-        }
 
-        System.out.println("The array after deleting element is: ");
-        for(int i = 0; i < size-cnt; i++) {
-            System.out.print(updatedArray[i] + " ");
+
+            int[] updatedArray = new int[size-cnt];
+            int ind = 0;
+            for(int i = 0; i < size; i++) {
+                if(arr[i] != ele) {
+                    updatedArray[ind] = arr[i];
+                    ind++;
+                }
+            }
+
+            System.out.println("The array after deleting element is: ");
+            for(int i = 0; i < size-cnt; i++) {
+                System.out.print(updatedArray[i] + " ");
+            }
         }
     }
 }

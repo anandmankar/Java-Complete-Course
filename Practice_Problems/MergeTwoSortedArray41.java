@@ -44,28 +44,28 @@ public class MergeTwoSortedArray41 {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter first array size: ");
-        int n = sc.nextInt();
+        try(Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter first array size: ");
+            int n = sc.nextInt();
 
-        System.out.println("Enter second array size: ");
-        int m = sc.nextInt();
+            System.out.println("Enter second array size: ");
+            int m = sc.nextInt();
 
-        int[] arr1 = new int[n];
-        int[] arr2 = new int[m];
+            int[] arr1 = new int[n];
+            int[] arr2 = new int[m];
 
-        System.out.println("Enter first array elements: ");
-        for(int i = 0; i < n; i++) {
-            arr1[i] = sc.nextInt();        
+            System.out.println("Enter first array elements: ");
+            for(int i = 0; i < n; i++) {
+                arr1[i] = sc.nextInt();        
+            }
+
+            System.out.println("Enter second array elements: ");
+            for(int i = 0; i < m; i++) {
+                arr2[i] = sc.nextInt();
+            }
+
+            int[] result = merge(arr1, arr2);
+            System.out.println("Merged Array: " + Arrays.toString(result));
         }
-
-        System.out.println("Enter second array elements: ");
-        for(int i = 0; i < m; i++) {
-            arr2[i] = sc.nextInt();
-        }
-
-        int[] result = merge(arr1, arr2);
-        System.out.println("Merged Array: " + Arrays.toString(result));
-
     }
 }

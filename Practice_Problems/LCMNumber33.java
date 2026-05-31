@@ -18,14 +18,14 @@ public class LCMNumber33 {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a Nummber: ");
-        int a = sc.nextInt();
-        System.out.println("Enter a second Number: ");
-        int b = sc.nextInt();
+        try(Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter a Nummber: ");
+            int a = sc.nextInt();
+            System.out.println("Enter a second Number: ");
+            int b = sc.nextInt();
 
-        int res = lcmNum(a, b);
-        System.out.println("the lcm is: " + res);
-
+            int res = lcmNum(a, b);
+            System.out.println("the lcm is: " + res);
+        }
     }
 }
