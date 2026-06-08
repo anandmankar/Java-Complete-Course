@@ -1,5 +1,4 @@
 package ChallengeAbstraction;
-
 public class TestShape {
     public static void main() {
 //        ChallengeAbstraction.Shape shape = new ChallengeAbstraction.Shape();
